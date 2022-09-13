@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var darkModeLabel: UILabel!
+    @IBOutlet weak var outletSwitch: UISwitch!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -37,6 +39,19 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
     }
     
+    @IBAction func darkAction(_ sender: Any) {
+        if outletSwitch.isOn == true{
+            view.backgroundColor = UIColor.white
+            darkModeLabel.textColor = UIColor.white
+            tipAmountLabel.textColor = UIColor.white
+            totalLabel.textColor = UIColor.white
+        }else{
+            view.backgroundColor = UIColor.white
+            darkModeLabel.textColor = UIColor.black
+            tipAmountLabel.textColor = UIColor.black
+            totalLabel.textColor = UIColor.black
+        }
+    }
     
 }
 
